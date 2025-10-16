@@ -40,4 +40,15 @@ class StringCalculatorTest {
         //then
         assertEquals(0, result);
     }
+
+    @DisplayName(",또는 : 구분자로 분리된 숫자의 합을 반환")
+    @Test
+    void add_with_basic_delimiters(){
+        //given
+        String text = "1,2:3";
+        //when
+        int result = stringCalculator.add(text);
+        //then
+        assertEquals(6, result);
+    }
 }
