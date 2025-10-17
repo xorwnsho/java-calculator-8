@@ -16,6 +16,10 @@ public class StringCalculator {
                 .mapToInt(Integer::parseInt)
                 .toArray();
 
+        if (Arrays.stream(parsedNumbers).anyMatch(n -> n < 0)) {
+            throw new IllegalArgumentException();
+        }
+
         return Arrays.stream(parsedNumbers).sum();
     }
 }

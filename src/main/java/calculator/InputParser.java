@@ -22,7 +22,7 @@ public class InputParser {
             return numbers.split(Pattern.quote(customDelimiter));
         }
 
-        return text.split("[,;]");
+        return text.split("[,:]");
     }
 }
 
