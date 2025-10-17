@@ -8,11 +8,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StringCalculatorTest {
 
+    private Parser parser;
     private StringCalculator stringCalculator;
 
     @BeforeEach
     void setUp() {
-        stringCalculator = new StringCalculator();
+        parser = new InputParser();
+        stringCalculator = new StringCalculator(parser);
     }
 
     @DisplayName("null일 때는 0을 반환")

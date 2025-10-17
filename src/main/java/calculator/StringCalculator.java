@@ -4,7 +4,11 @@ import java.util.Arrays;
 
 public class StringCalculator {
 
-    private final InputParser parser = new InputParser();
+    private Parser parser;
+
+    public StringCalculator(Parser parser){
+        this.parser = parser;
+    }
 
     public int add(String text) {
 

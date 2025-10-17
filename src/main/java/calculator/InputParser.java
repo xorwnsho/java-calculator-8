@@ -3,8 +3,9 @@ package calculator;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
-public class InputParser {
+public class InputParser implements Parser{
 
+    @Override
     public String[] parse(String text) {
 
         // 1번 기능 : text가 null이거나 비어있을 시에 0을 반환
