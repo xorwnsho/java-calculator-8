@@ -53,4 +53,15 @@ class StringCalculatorTest {
         //then
         assertEquals(6, result);
     }
+
+    @DisplayName("커스텀 구분자를 사용했을 때 성공해야 한다.")
+    @Test
+    void custom_delimiter(){
+        //given
+        String text = "//;\\n1;2;3";
+        //when
+        int result = stringCalculator.add(text);
+        //then
+        assertEquals(6, result);
+    }
 }
